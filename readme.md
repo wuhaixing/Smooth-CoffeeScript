@@ -1,9 +1,9 @@
 ![Smooth CoffeeScript](https://github.com/autotelicum/Smooth-CoffeeScript/raw/master/img/WebHeader.png)
 
-**Smooth CoffeeScript** is a free book about CoffeeScript and programming. No previous programming knowledge is required. Over 200 pages and 35 exercises. Download includes book and full source code with and without solutions.
+**Smooth CoffeeScript** 是讲述CoffeeScript 及编程的free book. 阅读本书不需要了解编程方面的知识. 大概200页左右，有35个练习题. Download includes book and full source code with and without solutions.
 More information: [Book webpage](http://autotelicum.github.com/Smooth-CoffeeScript/).
 
-**[Interactive HTML 5 edition](http://autotelicum.github.com/Smooth-CoffeeScript/interactive/interactive-coffeescript.html)** - No installation required.
+**[Interactive HTML 5 edition](http://autotelicum.github.com/Smooth-CoffeeScript/interactive/interactive-coffeescript.html)** - 无需安装.
 [Quick references and various examples](http://autotelicum.github.com/Smooth-CoffeeScript/literate/goodies.html).
 
 -----
