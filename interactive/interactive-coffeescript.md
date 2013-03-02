@@ -8,14 +8,13 @@ Edit ,>markdown2pdf --listings --xetex '--template=pandoc-template.tex' -o inter
 
 #####
 
-![Scratch Card](../img/ostrich.jpg)\
+![刮刮卡](../img/ostrich.jpg)\
 
 ![Smooth Cover](../img/SmoothCoverInteractive.png)\
 
-Scratch card disclaimer: Using a coin may cause damage to your
-screen.
+刮刮卡声明: 不要用硬币，否则可能损伤你的屏幕.
 
-##### View Solution
+##### 查看代码
 ######
 
 ~~~~ {.coffeescript}
@@ -108,23 +107,21 @@ draw = (ctx) -> # ctx is an HTML5 Canvas context
 
 * * * * * * * * * *
 
-# Smooth CoffeeScript --- Interactive Edition
+# Smooth CoffeeScript --- 交互版
 
 * * * * * * * * * *
 
 
-_An introduction to programming in CoffeeScript with an emphasis on
-clarity and abstraction._
+_介绍 CoffeeScript 编程，重点突出其清晰度和抽象性._
 
-This edition requires an [HTML~5~ web browser](#fn2). It is meant
-as a _gift_ to welcome you into the wondrous world of programming.
+请使用支持 [HTML~5~ 的 web 浏览器](#fn2)阅读. 欢迎进入奇妙的编程世界，这是我们的一份 _心意_。
 You can provide
 [feedback](https://github.com/autotelicum/Smooth-CoffeeScript/issues) or
 have a look at the ghost in the machine: [Grimoire](./grimoire.html).
 It is ifself an interactive literate document.
 
-The source of this book is a [literate markdown
-program/document](https://raw.github.com/autotelicum/Smooth-CoffeeScript/gh-pages/interactive/interactive-coffeescript.md)
+本书源码是一份 [文字稿的 markdown
+程序/文档](https://raw.github.com/autotelicum/Smooth-CoffeeScript/gh-pages/interactive/interactive-coffeescript.md)
 which produces this code:
 [CoffeeScript](./interactive-coffeescript.coffee), that translates
 into [JavaScript](./interactive-coffeescript.js) and produces this
@@ -162,34 +159,34 @@ Source code, static HTML and PDF editions at:
 
 * * * * * * * * * *
 
-### Table of Contents
+### 目 录
 
 * * * * * * * * * *
 
 
-* [Part I: Preface](#part-i.-preface)
-    * [Foreword](#foreword)
-    * [Getting Started](#getting-started)
-* [Part II: Language](#part-ii.-language)
-    * [Introduction](#introduction)
-    * [Basic CoffeeScript](#basic-coffeescript)
-    * [Functions](#functions)
-    * [Data Structures](#data-structures-objects-and-arrays)
-    * [Error Handling](#error-handling)
-* [Part III: Paradigm](#part-iii.-paradigm)
-    * [Functional Programming](#functional-programming)
-    * [Searching](#searching)
-    * [Object Orientation](#object-oriented-programming)
-    * [Regular Expressions](#regular-expressions)
-    * [Modularity](#modularity)
-* [Part IV: Appendix](#part-iv.-appendix)
+* [Part I: 序](#part-i.-preface)
+    * [前言](#foreword)
+    * [开动吧](#getting-started)
+* [Part II: 语言](#part-ii.-language)
+    * [简介](#introduction)
+    * [CoffeeScript基础](#basic-coffeescript)
+    * [函数](#functions)
+    * [数据结构](#data-structures-objects-and-arrays)
+    * [错误处理](#error-handling)
+* [Part III: CoffeeScript编程范式](#part-iii.-paradigm)
+    * [函数式编程](#functional-programming)
+    * [搜索](#searching)
+    * [面向对象](#object-oriented-programming)
+    * [正则表达式](#regular-expressions)
+    * [模块化](#modularity)
+* [Part IV: 附录](#part-iv.-appendix)
     * [Language Extras](#language-extras)
-    * [Binary Heaps](#binary-heaps)
-    * [Performance](#performance)
-    * [Command Line Utility](#command-line-utility)
-* [Part V: Reference](#part-v.-reference-and-index)
+    * [二进制堆](#binary-heaps)
+    * [性能](#performance)
+    * [命令行工具](#command-line-utility)
+* [Part V: 参考](#part-v.-reference-and-index)
     * [Language Reference](#language-reference)
-    * [Reserved Words](#reserved-words)
+    * [保留字](#reserved-words)
     * [Underscore](#underscore)
     * [QuickCheck](#quickcheck)
     * [Additional Words](#additional-words)
@@ -197,27 +194,25 @@ Source code, static HTML and PDF editions at:
     Uncommented index since there is no tool support for labels.
     Entries marked with [↓](#index-*) have had the ↓ removed.
 
-    * [Index](#index)
+    * [索引](#index)
 -->
-    * [Footnotes](#footnotes)
+    * [脚注](#footnotes)
 
 
 * * * * * * * * * *
 
-## Part I. Preface
+## Part I. 序
 
 * * * * * * * * * *
 
-### Foreword
+### 前言
 
 * * * * * * * * * *
 
 
-CoffeeScript is a lucid evolution of JavaScript created by Jeremy
-Ashkenas. This book attempts to be an evolution of “Eloquent
-JavaScript” by Marijn Haverbeke. Apart from the major change in
-explaining CoffeeScript instead of JavaScript, numerous other changes
-have been made and sections have been added, edited or removed.
+CoffeeScript 是 JavaScript 进化版，由Jeremy
+Ashkenas创建. 本书参照了  Marijn Haverbeke 的 “机锋
+JavaScript” . 除了将目标语言从JavaScript 变成 CoffeeScript, 还做了很多其它修改，章节上也有调整。
 
 Everything that is expressed in this book is therefore solely the
 responsibility of the editor. In the sense of open source software,
@@ -331,7 +326,7 @@ show  server.address()
 
 * * * * * * * * * *
 
-### Getting Started
+### 开动吧
 
 * * * * * * * * * *
 
@@ -526,127 +521,84 @@ if exports?
 
 * * * * * * * * * *
 
-## Part II. Language
+## Part II. 语言
 
 * * * * * * * * * *
 
-### Introduction
+### 简介
 
 * * * * * * * * * *
 
+个人电脑刚出现的时候，大多数都配备了一种简单的编程语言，一般是BASIC的某种变体。
+与电脑的交互跟这种语言关系非常紧密，，所有的电脑用户，不管愿意与否，对这种
+语言都略知一二。现在电脑已经非常普遍了，大多数用户只要用鼠标在屏幕上点来点去
+就能满足自己的需要。可对于我们这些天生的技术迷来说，离了编程仿佛就是把电脑
+关进了笼子里。
 
-When personal computers were first introduced, most of them came
-equipped with a simple programming language, usually a variant of
-BASIC.  Interacting with the computer was closely integrated with
-this language, and thus every computer-user, whether he wanted to
-or not, would get a taste of it. Now that computers have become
-plentiful and cheap, typical users do not get much further than
-clicking things with a mouse. For most people, this works very well.
-But for those of us with a natural inclination towards technological
-tinkering, the removal of programming from every-day computer use
-presents something of a barrier.
-
-Fortunately, as an effect of developments in the World Wide Web,
-it so happens that every computer equipped with a modern web-browser
-also has an environment for programming JavaScript which can easily
-be adapted to an environment for CoffeeScript. In today's spirit
-of not bothering the user with technical details, it is kept well
-hidden, but a web-page can make it accessible, and use it as a
-platform for learning to program. This is such a page.
+拜互联网所赐，现在所有电脑上都装着web浏览器，因此也有Javascript编程环境，
+可以很容易地为CoffeeScript所用。本着不用技术细节给用户添堵的精神，这个环境
+被藏起来了，但只要有个web页面，就能进入这个环境，并以它为平台学习编程。你正在看
+的就是这样一个页面。
 
 ##### ○•○
 
-> *I do not enlighten those who are not eager to learn, nor arouse those
-> who are not anxious to give an explanation themselves. If I have
-> presented one corner of the square and they cannot come back to me
-> with the other three, I should not go over the points again.*
+> *子曰：“不愤不启，不悱不发。举一隅不以三隅反，则不复也。”*
+                              选自《论语·第七章·述而篇》
 
-Confucius
+本书不光要讲解CoffeeScript，还想介绍编程的基本原则。编程，说实在的，很难。
+一般来说，编程的宗旨是保持简单，保持清晰。但在这些基本原则之上构建起来的程序，
+会变得越来越复杂，有其固有的规律和复杂性。因此，编程很难呈现出简单或可预测的
+状态。该领域的奠基人之一，Donald Knuth 说，这是一门*艺术*。
 
+要想从书里捞到点干货，光看不行。你还得保持清醒的头脑，努力做好书中的练习，有股
+不搞明白绝不罢休的劲头。
 
-Besides explaining CoffeeScript, this book tries to be an introduction
-to the basic principles of programming. Programming, it turns out,
-is hard. The fundamental rules are, most of the time, simple and
-clear. But programs, while built on top of these basic rules, tend
-to become complex enough to introduce their own rules, their own
-complexity.  Because of this, programming is rarely simple or
-predictable. As Donald Knuth, who is something of a founding father
-of the field, says, it is an *art*.
-
-To get something out of this book, more than just passive reading
-is required. Try to stay sharp, make an effort to solve the exercises,
-and only continue on when you are reasonably sure you understand
-the material that came before.
 
 ##### ○•○
 
-> *The computer programmer is a creator of universes for which he alone
-> is responsible. Universes of virtually unlimited complexity can be
-> created in the form of computer programs.*
+> *程序员跟宇宙的缔造者一样。程序就是他们创建的虚拟宇宙，
+> 可以变得无限复杂.*
 
 Joseph Weizenbaum, *Computer Power and Human Reason*\
 
+计算机程序是个复杂的多面体。它是程序员敲的一段文本，是指挥电脑工作的直接命令，是存在
+内存里的数据，还控制着其所在内存的动作。在我们熟知的东西里很难找到跟程序类似的
+东西，不过勉强可以把它比作一台机器。机械表的齿轮巧妙地契合在一起，如果表匠好，这块
+表能精确地走好多年。程序的各个元素也是这样组合在一起，如果程序员知道自己在干啥，程序
+也能平稳运行。
 
-A program is many things. It is a piece of text typed by a programmer,
-it is the directing force that makes the computer do what it does,
-it is data in the computer's memory, yet it controls the actions
-performed on this same memory. Analogies that try to compare programs
-to objects we are familiar with tend to fall short, but a superficially
-fitting one is that of a machine. The gears of a mechanical watch
-fit together ingeniously, and if the watchmaker was any good, it
-will accurately show the time for many years. The elements of a
-program fit together in a similar way, and if the programmer knows
-what he is doing, the program will run without crashing.
+电脑就是运行这些非物质机器的宿主。电脑本身只能傻乎乎地做一些简单的动作，但它们做这些
+事情的速度快得让人眼花缭乱的。程序能把很多简单的动作组合起来，完成非常复杂的任务。
 
-A computer is a machine built to act as a host for these immaterial
-machines. Computers themselves can only do stupidly straightforward
-things. The reason they are so useful is that they do these things
-at an incredibly high speed. A program can, by ingeniously combining
-many of these simple actions, do very complicated things.
+编程是个让人着迷的游戏。一个程序就是一座思想之塔。搭建它不用花一文钱，也没重量，敲敲
+键盘它就能长。如果我们忘乎所以，程序的规模和复杂度很快就会失去控制，连创建者都会被搞
+糊涂。这就是编程最主要的问题。所以现如今很多软件都会崩溃，出错，搞砸了。
 
-To some of us, writing computer programs is a fascinating game. A
-program is a building of thought. It is costless to build, weightless,
-growing easily under our typing hands. If we get carried away, its
-size and complexity will grow out of control, confusing even the
-one who created it. This is the main problem of programming. It is
-why so much of today's software tends to crash, fail, screw up.
+能正常运转的程序很美。编程的艺术就是控制复杂度的技巧。优秀的程序是被驯服的猛兽，
+能在复杂中呈现简单。
 
-When a program works, it is beautiful. The art of programming is
-the skill of controlling complexity. The great program is subdued,
-made simple in its complexity.
 
 ##### ○•○
 
-Today, many programmers believe that this complexity is best managed
-by using only a small set of well-understood techniques in their
-programs.  They have composed strict rules about the form programs
-should have, and the more zealous among them will denounce those
-who break these rules as *bad* programmers.
+现在，很多程序员认为只在程序中使用一小部分大家所熟知的技术可以控制这种复杂性。他们给
+正规的程序设定了严格的规则，而其中的狂热分子会声讨那些胆敢打破这些规则的“坏”程序员。
 
-What hostility to the richness of programming! To try to reduce it
-to something straightforward and predictable, to place a taboo on
-all the weird and beautiful programs. The landscape of programming
-techniques is enormous, fascinating in its diversity, still largely
-unexplored.
+要把编程变成简单直接和可预测的东西，要给所有奇美的程序加上各种限制。这对丰富多彩的
+编程是有多大敌意啊！编程技术的迷人之处就在于其广袤的多样性，有很多尚未探索过的蛮荒之地。
 
-It is certainly littered with traps and snares, luring the inexperienced
-programmer into all kinds of horrible mistakes, but that only means
-you should proceed with caution, keep your wits about you. As you
-learn, there will always be new challenges, new territory to explore.
-The programmer who refuses to keep exploring will surely stagnate,
-forget his joy, lose the will to program (and become a manager).
+其中肯定有各种陷阱和圈套，引诱着经验不足的程序员犯下各种恐怖的错误，但因此而固步自封，
+因噎废食的程序员肯定会忘掉自己的乐趣，失去编程的乐趣（只好变成经理）。正确的做法是在
+编程时小心谨慎，充分发挥你的聪明才智。随着不断的学习，你总会遇到新的挑战，进入新的领域。
 
-As far as I am concerned, the definite criterion for a program is
-whether it is correct. Efficiency, clarity, and size are also
-important, but how to balance these against each other is always a
-matter of judgement, a judgement that each programmer must make for
-himself. Rules of thumb are useful, but one should never be afraid
-to break them.
+
+
+衡量程序的终极标准是它做的对不对。效率，清晰度，大小虽然也都重要，但如何平衡他们， 
+每个程序员必须自己做出判断。经验法则固然有用，但违反它们也未尝不可。
 
 ##### ○•○
 
-In the beginning, at the birth of computing, there were no programming
-languages. Programs looked something like this:
+最初，计算机刚刚诞生时，根本没有编程语言。程序是下面这种东西：
+
 
 ~~~~ {.listing}
 00110001 00000000 00000000 00110001 00000001 00000001
@@ -656,39 +608,30 @@ languages. Programs looked something like this:
 01100010 00000000 00000000
 ~~~~
 
-That is a program to add the numbers from one to ten together, and
-print out the result (1 + 2 + … + 10 = 55). It could run on a very
-simple kind of computer. To program early computers, it was necessary
-to set large arrays of switches in the right position, or punch
-holes in strips of cardboard and feed them to the computer. You can
-imagine how this was a tedious, error-prone procedure. Even the
-writing of simple programs required much cleverness and discipline,
-complex ones were nearly inconceivable.
+这段程序从1加到10，并输出结果(1 + 2 + … + 10 = 55)。它可以在非常简单的计算机
+上运行。要给早期计算机编程，必须把一大组开关拨到正确的位置上，或者在硬纸带上打孔，
+输入到计算机里。你可以想象得出来，这个过程是多么的繁琐和容易出错。即便写个简单
+的程序，也需要极大的聪明才智和严明的纪律，复杂的就别想了，没戏。
 
-Of course, manually entering these arcane patterns of bits (which
-is what the 1s and 0s above are generally called) did give the
-programmer a profound sense of being a mighty wizard. And that has
-to be worth something, in terms of job satisfaction.
+当然，手工输入这些晦涩的位模式（上面这种1和0一般都这么叫）的确给程序员一种自己是
+神奇魔法师的良好感觉。从工作的满意度来讲，的确是值得的。
 
-Each line of the program contains a single instruction. It could
-be written in English like this:
+程序的每一行都有一条指令，翻成汉语就是：
 
 ~~~~ {.listing}
-1 Store the number 0 in memory location 0
-2 Store the number 1 in memory location 1
-3 Store the value of memory location 1 in location 2
-4 Subtract the number 11 from the value in location 2
-5 If the value in memory location 2 is the number 0,
-    continue with instruction 9
-6 Add the value of memory location 1 to location 0
-7 Add the number 1 to the value of memory location 1
-8 Continue with instruction 3
-9 Output the value of memory location 0
+1 把数值 0 存在内存的位置 0 中
+2 把数值 1 存在内存的位置 1 中
+3 把内存位置 1 中的值存在位置 2 中
+4 将位置 2 中的值减去 11 
+5 如果内存位置 2 中的值是 0，转而执行指令 9
+6 将内存位置 1 的值加到 位置 0 上
+7 给内存位置 1 的值加 1
+8 转而执行指令 3
+9 输出内存位置 0 中的值
 ~~~~
 
-While that is more readable than the binary soup, it is still rather
-unpleasant. It might help to use names instead of numbers for the
-instructions and memory locations:
+尽管这比那段二进制代码的可读性更强，但还是不太好。用名字代替指令和内存位置的数值
+可能会更好：
 
 ~~~~ {.listing}
 Set 'total' to 0
@@ -704,20 +647,14 @@ Continue at [loop]
 Output 'total'
 ~~~~
 
-At this point it is not too hard to see how the program works. Can
-you?  The first two lines give two memory locations their starting
-values: `total` will be used to build up the result of the program,
-and `count` keeps track of the number that we are currently looking
-at. The lines using `compare` are probably the weirdest ones. What
-the program wants to do is see if `count` is equal to 11, in order
-to decide whether it can stop yet. Because the machine is so
-primitive, it can only test whether a number is zero, and make a
-decision (jump) based on that. So it uses the memory location
-labelled `compare` to compute the value of `count - 11`, and makes
-a decision based on that value. The next two lines add the value
-of `count` to the result, and increment `count` by one every time
-the program has decided that it is not 11 yet. Here is the same
-program in CoffeeScript:
+这就不难看出来这程序是怎么回事儿了。头两行给两个内存位置设置了初始值：`total`
+用来保存程序的运行结果，`count`用来跟踪我们目前要加的数值。用`compare`那一行
+应该是最奇怪的。它的作用是程序用来判断`count`是否等于11，以便决定是否应该停下
+来。因为机器太原始，所以它只能判断数值是否为0，然后根据判断结果决定（跳转）。
+所以它用标签为`compare` 的内存位置计算 `count - 11`的值，并以此值为依据做
+出决定。接下来的两行将`count`的值加到结果上，只要还不是11，就给`count`加1。
+下面是同一程序的CoffeeScript实现：
+
 
 ~~~~ {.coffeescript}
 total = 0
@@ -728,17 +665,12 @@ while count <= 10
 total
 ~~~~
 
-This gives us a few more improvements. Most importantly, there is
-no need to specify the way we want the program to jump back and
-forth anymore. The magic word `while` takes care of that. It continues
-executing the lines indented below it as long as the condition it
-was given holds: `count <= 10`, which means '`count` is less than
-or equal to `10`'. Apparently, there is no need anymore to create
-a temporary value and compare that to zero. This was a stupid little
-detail, and the power of programming languages is that they take
-care of stupid little details for us.
+这段代码又有几处改善。其中最重要的是我们再不用关心程序如何向前后跳转。魔咒
+`while`会帮我们处理好这些事情。只要满足条件： `count <= 10`，即`count`小于
+等于10，它就继续执行。很明显，已经没必要创建一个临时值并判断它是否等于0了。这是
+一个无脑的小细节，而变成语言的力量就在于它能帮我们处理那些无脑的小细节。
 
-This can also be expressed in a shorter form in CoffeeScript:
+在CoffeeScript中，还可以用更短的代码表示相同的意思：
 
 ~~~~ {.coffeescript}
 total = 0
@@ -746,14 +678,12 @@ total += count for count in [1..10]
 total
 ~~~~
 
-The `for` and `in` words goes through the range of numbers from 1
-to 10 `[1..10]`, assigning each number in turn to `count`. Each
-value in `count` is then added to `total`.
+关键字 `for` 和 `in` 遍历 1 到 10 之间的数值 `[1..10]`，依次将其中的值赋给
+`count`。然后将其加到`total`上。
 
-Finally, here is what the program could look like if we happened
-to have the convenient operation `sum` available, which computes
-the sum of a collection of numbers similar to the mathematical
-notation $\sum_{n=1}^{10}n$:
+最后，如果恰好有个便捷的`sum`操作，能像数学符号 $\sum_{n=1}^{10}n$ 那样计算
+一个集合数值的和值，代码还可以更简洁：
+
 
 ~~~~ {.COFFEESCRIPT}
 sum [1..10]
@@ -770,9 +700,9 @@ sum [1..10]
 
 #####
 
-Another possibility is to have functions attached to datatypes.
-Here a sum function is attached to an array, giving the sum of the
-elements in the array.
+还有一种可能，这个数据类型恰好有个函数。数组上有个sum函数，可以给出数组
+元素的和值。
+
 
 ~~~~ {.COFFEESCRIPT}
 [1..10].sum()
@@ -790,17 +720,16 @@ delete Array::sum
 
 #####
 
-The moral of this story, then, is that the same program can be
-expressed in long and short, unreadable and readable ways. The first
-version of the program was extremely obscure, while the last ones
-are almost English: `show` the `sum` of the numbers from `1` to
-`10`. (We will see in later chapters how to build things like `sum`.)
+之所以讲这个故事，是想告诉你，同样的程序，其表示方式可长可断，可以让你看懂，
+也可以让你看不懂。我们这个程序的第一版非常难懂，而最后一个几乎就是普通英文：
+`show` 从 `1` 到 `10` 这写数值的 `sum` （在后续章节中，你会看到如何构建
+`sum`这样的东西）。
 
-A good programming language helps the programmer by providing a
-more abstract way to express himself. It hides uninteresting details,
-provides convenient building blocks (such as the `while` construct),
-and, most of the time, allows the programmer to add building blocks
-himself (such as the `sum` operation).
+
+好的编程语言能让程序员以更简明的方式表示自己的想法。可以把无聊的细节隐藏起来，
+提供便捷的构件（比如 `while`结构），而且一般还能让程序员添加自己的构件（比如
+ `sum`操作）。
+
 
 ##### ○•○
 
